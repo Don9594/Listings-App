@@ -17,6 +17,17 @@ class Recipe:Identifiable,Decodable{
     var cookTime:String
     var totalTime:String
     var servings:Int
-    var ingredients:[String]
+    var highlights:[String]
+    var ingredients:[Ingredient]
     var directions:[String]
+}
+
+//Identifiable: lets us use the class instance in a list
+//Decodable: lets us parse it from a json file
+class Ingredient:Identifiable,Decodable{
+    var id:UUID?
+    var name=""
+    var numAmt=0
+    var denomAmt:Int?
+    var unit:String?
 }

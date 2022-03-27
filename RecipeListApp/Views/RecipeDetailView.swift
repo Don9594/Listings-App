@@ -26,8 +26,8 @@ struct RecipeDetailView: View {
                 VStack(alignment: .leading) {
                     Text("Ingredients").font(.headline).padding(.bottom,1)
                     
-                    ForEach(recipeDetail.ingredients, id:\.self){ spices in
-                        Text("•"+spices)
+                    ForEach(recipeDetail.ingredients){ i in
+                        Text("•"+i.name)
                             .fontWeight(.light)
                         
                     }
