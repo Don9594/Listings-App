@@ -26,8 +26,8 @@ class Recipe:Identifiable,Decodable{
 //Decodable: lets us parse it from a json file
 class Ingredient:Identifiable,Decodable{
     var id:UUID?
-    var name=""
-    var numAmt=0
+    var name:String
+    var numAmt:Int?
     var denomAmt:Int?
     var unit:String?
 }

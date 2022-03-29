@@ -13,7 +13,7 @@ class DataService{
     func getLocalData()->[Recipe]{
         
         //get a url path to the file
-        let pathString = Bundle.main.path(forResource: "recipes", ofType: "json")
+        let pathString = Bundle.main.path(forResource: "recipes2", ofType: "json")
         
         
         guard pathString != nil else {
