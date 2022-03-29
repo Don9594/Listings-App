@@ -12,9 +12,9 @@ struct RecipeDetailView: View {
     var body: some View {
         ScrollView{
             
-            VStack{
+            VStack(alignment: .leading){
                 //MARK: Recipe Image
-                Image(recipeDetail.image).resizable().scaledToFit()
+                Image(recipeDetail.image).resizable().scaledToFill()
                 
                 //MARK: Recipe name
 //                Text(recipeDetail.name)
@@ -32,6 +32,7 @@ struct RecipeDetailView: View {
                         
                     }
                 }
+                .padding(.leading)
                 
                 //MARK: Divider
                 Divider()
@@ -47,7 +48,7 @@ struct RecipeDetailView: View {
                 }
                 .padding(.top)
             }
-        }.navigationBarTitle(Text(recipeDetail.name))
+        }.navigationBarTitle(recipeDetail.name)
         
     }
 }
