@@ -12,7 +12,7 @@ struct RecipeTabView: View {
         
         TabView{
             
-            Text("Featured Items").tabItem{
+            RecipeFeaturedView().tabItem{
                 VStack{
                     Image(systemName: "star.fill")
                     Text("Featured")
