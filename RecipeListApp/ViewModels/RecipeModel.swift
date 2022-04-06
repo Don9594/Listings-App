@@ -12,8 +12,16 @@ class RecipeModel:ObservableObject{
     
     init() {
         recipes.self = DataService().getLocalData()
+        
         //if we are using DataService class only for methods, set methods to static and then do this
         //recipes.self = DataService.getLocalData()
         
+    }
+    
+    static func getPortion(ingredient:Ingredient ,servingSize:Int,targetServing:Int)->String{
+        //get single serving size
+        
+        //
+        return String(targetServing)
     }
 }
