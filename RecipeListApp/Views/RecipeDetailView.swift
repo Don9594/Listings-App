@@ -18,9 +18,9 @@ struct RecipeDetailView: View {
                 Image(recipeDetail.image).resizable().scaledToFill()
                 
                 //MARK: Recipe name
-//                Text(recipeDetail.name)
-//                    .font(.title3)
-//                    .fontWeight(.light).padding()
+                Text(recipeDetail.name)
+                    .font(.largeTitle).bold()
+                    .padding()
                 
                 
                 VStack(alignment: .leading) {
@@ -60,7 +60,7 @@ struct RecipeDetailView: View {
                 }
                 .padding(.top)
             }
-        }.navigationBarTitle(recipeDetail.name)
+        }//.navigationBarTitle(recipeDetail.name)
         
     }
 }

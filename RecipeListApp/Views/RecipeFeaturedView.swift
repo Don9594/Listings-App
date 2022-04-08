@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RecipeFeaturedView: View {
     @EnvironmentObject var model:RecipeModel
+    @State var showSheet = false
     var body: some View {
         
         VStack(alignment: .leading, spacing:0) {
@@ -17,14 +18,21 @@ struct RecipeFeaturedView: View {
                 TabView{
                     ForEach(0..<model.recipes.count){ index in
                         if model.recipes[index].featured==true{
-                            ZStack {
-                                Rectangle().foregroundColor(.white)
-                                
-                                VStack(spacing:0){
-                                    Image(model.recipes[index].image).resizable().aspectRatio(contentMode: .fill).clipped()
-                                    Text(model.recipes[index].name).padding(5)
+                            Button(action: {
+                                self.showSheet = true
+                            }, label: {
+                                ZStack {
+                                    Rectangle().foregroundColor(.white)
+                                    
+                                    VStack(spacing:0){
+                                        Image(model.recipes[index].image).resizable().aspectRatio(contentMode: .fill).clipped()
+                                        Text(model.recipes[index].name).padding(5)
+                                    }
                                 }
-                            }.frame(width: geo.size.width - 40, height: geo.size.height - 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).cornerRadius(15).shadow(color:Color(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.7),radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/,x:-5,y:10)
+                            }).sheet(isPresented: $showSheet, content: {
+                                RecipeDetailView(recipeDetail: model.recipes[index] )
+                            })
+                            .buttonStyle(PlainButtonStyle()).frame(width: geo.size.width - 40, height: geo.size.height - 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).cornerRadius(15).shadow(color:Color(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.7),radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/,x:-5,y:10)
                         }
                     }
                 }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic)).indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
