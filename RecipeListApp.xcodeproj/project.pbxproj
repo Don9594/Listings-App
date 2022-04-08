@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B032CAED27FFCC71009AF40A /* Highlights.swift in Sources */ = {isa = PBXBuildFile; fileRef = B032CAEC27FFCC71009AF40A /* Highlights.swift */; };
 		B041C8CE27EA916C00A9D0B6 /* RecipeListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B041C8CD27EA916C00A9D0B6 /* RecipeListApp.swift */; };
 		B041C8D027EA916C00A9D0B6 /* RecipeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B041C8CF27EA916C00A9D0B6 /* RecipeListView.swift */; };
 		B041C8D227EA916F00A9D0B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B041C8D127EA916F00A9D0B6 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B032CAEC27FFCC71009AF40A /* Highlights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Highlights.swift; sourceTree = "<group>"; };
 		B041C8CA27EA916C00A9D0B6 /* RecipeListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B041C8CD27EA916C00A9D0B6 /* RecipeListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListApp.swift; sourceTree = "<group>"; };
 		B041C8CF27EA916C00A9D0B6 /* RecipeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				B09BE92A27ED78FB00F2F1E6 /* RecipeDetailView.swift */,
 				B09BE92C27F0A24900F2F1E6 /* RecipeTabView.swift */,
 				B09BE96827F3C5B300F2F1E6 /* RecipeFeaturedView.swift */,
+				B032CAEC27FFCC71009AF40A /* Highlights.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				B041C8E827EAA07300A9D0B6 /* DataService.swift in Sources */,
 				B09BE96927F3C5B300F2F1E6 /* RecipeFeaturedView.swift in Sources */,
 				B09BE92D27F0A24900F2F1E6 /* RecipeTabView.swift in Sources */,
+				B032CAED27FFCC71009AF40A /* Highlights.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

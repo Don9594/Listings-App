@@ -31,7 +31,10 @@ struct RecipeListView: View {
                                     HStack(spacing: 20.0){
                                         
                                         Image(r.image).resizable().scaledToFill().frame(width: 50, height: 50, alignment: .center).clipped().cornerRadius(5)
-                                        Text(r.name).foregroundColor(.black)
+                                        VStack(alignment:.leading) {
+                                            Text(r.name).font(.headline).foregroundColor(.black)
+                                            Highlights(highlights: r.highlights).foregroundColor(.black)
+                                        }
                                         
                                     }
                                 })
